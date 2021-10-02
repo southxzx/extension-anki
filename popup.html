@@ -2,9 +2,26 @@
 <html>
   <head>
     <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="css/popup.css">
   </head>
   <body>
-    <button id="changeColor"></button>
-    <script src="popup.js"></script>
+    <p id="deckName"></p>
+    <form>
+      <input class="input-text" type="text" id="inputEn" placeholder="English phrase"/>
+      <input class="input-text" type="text" id="inputVn" placeholder="Definitions"/>
+      <button class="btn btn-primary" id="btnAdd" type="submit">Add</button>
+    </form>
+    <form class="form-select">
+      <label class="label-deck">Deck:</label>
+      <select id="listDeck" class="list-deck">
+        <option value="XX">XX</option>
+      </select>
+    </form>
   </body>
+  <script src="lib/jquery-3.6.0.min.js"></script>
+  <script src="services/anki_api.js"></script>
+  <script src="services/get_decks.js"></script>
+  <script src="anki_api.js"></script>
+  <script src="js/options.js"></script>
+  <script src="popup.js"></script>
 </html>
